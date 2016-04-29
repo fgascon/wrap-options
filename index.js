@@ -38,5 +38,19 @@ Options.prototype.map = function (name, iterator, context) {
 Options.prototype.mapConstructor = function (name, constructor) {
     return this.map(name, function (data) {
         return new constructor(data);
-    }, this);
+    });
+};
+
+Options.prototype.getOptions = function (name, defaultValue) {
+    return new Options(this.get(name, defaultValue));
+};
+
+Options.prototype.requireOptions = function (name) {
+    return new Options(this.require(name));
+};
+
+Options.prototype.mapOptions = function (name) {
+    return this.map(name, function (data) {
+        return new Options(data);
+    });
 };

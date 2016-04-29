@@ -17,7 +17,7 @@ console.log(result);
 // { name: 'me', isVisible: false }
 ```
 
-## API
+## Base API
 
 ### .get(name, defaultValue)
 Return the option value if present, otherwise return the defaultValue.
@@ -28,16 +28,38 @@ Return the option value if present, otherwise throw an error.
 ### .has(name)
 Check if the option was passes. Return a boolean.
 
+## Shorthand functions
+
 ### .map(name, iterator, context)
 Same as
 ```js
-.get(name, []).map(iterator, context)
+options.get(name, []).map(iterator, context)
 ```
 
 ### .mapConstructor(name, constructor)
 Same as:
 ```js
-.get(name, []).map(function (data) {
+options.get(name, []).map(function (data) {
     return new constructor(data);
+})
+```
+
+### .getOptions(name, defaultValue)
+Same as
+```js
+new Options(options.get(name, defaultValue))
+```
+
+### .requireOptions(name)
+Same as
+```js
+new Options(options.require(name))
+```
+
+### .mapOptions(name)
+Same as
+```js
+options.get(name, []).map(function (data) {
+    return new Options(data);
 })
 ```
