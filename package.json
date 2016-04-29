@@ -1,0 +1,19 @@
+{
+  "name": "wrap-options",
+  "version": "0.0.0",
+  "description": "constructor options utility",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgascon/wrap-options.git"
+  },
+  "keywords": [
+    "options"
+  ],
+  "author": "fgascon <frederic.gascon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fgascon/wrap-options/issues"
+  },
+  "homepage": "https://github.com/fgascon/wrap-options#readme"
+}
