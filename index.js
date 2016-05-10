@@ -11,7 +11,7 @@ Options.prototype.has = function (name) {
 };
 
 Options.prototype.get = function (name, defaultValue) {
-    if (this.has(name)) {
+    if (!this.has(name)) {
         return defaultValue;
     }
 
