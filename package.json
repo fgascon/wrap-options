@@ -1,6 +1,6 @@
 {
   "name": "wrap-options",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "constructor options utility",
   "main": "index.js",
   "repository": {
