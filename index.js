@@ -27,7 +27,7 @@ Options.prototype.require = function (name) {
 };
 
 Options.prototype.map = function (name, iterator, context) {
-    const array = this.get(name, []);
+    var array = this.get(name, []);
     if (typeof array.map !== 'function') {
         throw new TypeError('"' + name + '" must be a mapable array');
     }
